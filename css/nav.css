@@ -5,6 +5,8 @@
 }
 
 nav{
+    position: relative;
+    z-index: 1;
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-around;
