@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number!</title>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/numguess.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">H O M E</a></li>
+            <li><a href="numguess.html">N U M G U E S S</a></li>
+            <li><a href="sengen.html">S E N G E N</a></li>
+            <li><a href="obama.html">O B A M A</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">   
+        <div id="difficulty-div">
+            <h1 id="heading"></h1>
+            <button class="init-btn" data-difficulty="Easy">
+                <ul class="btn-text">
+                    <li>E</li>
+                    <li>A</li>
+                    <li>S</li>
+                    <li>Y</li>
+                    <li>(</li>
+                    <li>1</li>
+                    <li>-</li>
+                    <li>3</li>
+                    <li>)</li>
+                </ul>
+            </button>
+            <button class="init-btn" data-difficulty="Medium">
+                <ul class="btn-text">
+                    <li>M</li>
+                    <li>E</li>
+                    <li>D</li>
+                    <li>I</li>
+                    <li>U</li>
+                    <li>M</li>
+                    <li>(</li>
+                    <li>1</li>
+                    <li>-</li>
+                    <li>5</li>
+                    <li>)</li>
+                </ul>
+            </button>
+            <button class="init-btn" data-difficulty="Hard">
+                <ul class="btn-text">
+                    <li>H</li>
+                    <li>A</li>
+                    <li>R</li>
+                    <li>D</li>
+                    <li>(</li>
+                    <li>1</li>
+                    <li>-</li>
+                    <li>3</li>
+                    <li>)</li>
+                </ul>
+            </button>
+        </div>
+
+        <div id="guess" class="hide">
+            <input type="text" id="guess-input" autocomplete="off">
+
+            <button id="guess-submit">
+                <ul class="btn-text">
+                    <li>S</li>
+                    <li>U</li>
+                    <li>B</li>
+                    <li>M</li>
+                    <li>I</li>
+                    <li>T</li>
+                </ul>
+            </button>
+        </div>
+
+        <div id="main-menu">
+            <button id ="btn-play">
+                <ul class="btn-text">
+                    <li>P</li>
+                    <li>L</li>
+                    <li>A</li>
+                    <li>Y</li>
+                </ul>
+            </button>
+            <button id ="btn-history">
+                <ul class="btn-text">
+                    <li>H</li>
+                    <li>I</li>
+                    <li>S</li>
+                    <li>T</li>
+                    <li>O</li>
+                    <li>R</li>
+                    <li>Y</li>
+                </ul>
+            </button>
+        </div>
+
+        <button id="reset-btn">
+            <ul class="btn-text">
+                <li>M</li>
+                <li>E</li>
+                <li>N</li>
+                <li>U</li>
+            </ul>
+        </button>
+
+        <table id="history-table"> </table> 
+            
+        
+    </div>
+    <script src="js/numguess.js"></script>
+</body>
+</html>

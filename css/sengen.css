@@ -1,0 +1,32 @@
+#container {
+    padding: 120px;
+}
+
+#text-output {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-init {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.btn-text {
+    display: flex;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 32px;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
