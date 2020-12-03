@@ -71,7 +71,12 @@ function output(sentenceArray, incr, outputStr) {
         incr++
         textSFX.currentTime = 0;
         textSFX.play();
-        setTimeout(output, 110, sentenceArray, incr, outputStr);
+        setTimeout(
+            function() {
+                output(sentenceArray, incr, outputStr);
+            },
+            110
+        );
     } else {
         initButton.addEventListener("click", init);
     }
