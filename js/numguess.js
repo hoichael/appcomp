@@ -8,7 +8,7 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function(e) {
         buttonSFX.currentTime = 0;
         buttonSFX.play();
-        Game(e.target.getAttribute("data-difficulty"));
+        Game(e.currentTarget.getAttribute("data-difficulty"));
     });
 }
 
