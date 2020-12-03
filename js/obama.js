@@ -10,44 +10,57 @@ function cursorEvent(e) {
     let windowWidth = window.innerWidth;
     let windowHeight = window.innerHeight;
 
+    let newObama = null;
+
     if(cursorX > windowWidth / 2.5 && cursorX < (windowWidth / 2.5)*1.5
        && cursorY > windowHeight / 2.5 && cursorY < (windowHeight / 2.5)*1.5 ) {
         console.log("mid");
-        obama.src = "obamas/obama_center.png";
+        newObama = "#obama_center";
     }
     else if(cursorX > windowWidth / 2.5 && cursorX < (windowWidth / 2.5)*1.5
     && cursorY < windowHeight / 2) {
-        obama.src = "obamas/obama_up.png";
+        newObama = "#obama_up";
     }
     else if(cursorX > windowWidth / 2.5 && cursorX < (windowWidth / 2.5)*1.5
     && cursorY > windowHeight / 2) {
-        obama.src = "obamas/obama_down.png";
+        newObama = "#obama_down";
     }
     else {
         
         if(cursorX < windowWidth / 2) {
             
             if(cursorY > windowHeight / 2.5 && cursorY < (windowHeight / 2.5)*1.5) {
-                obama.src = "obamas/obama_left.png";
+                newObama = "#obama_left";
             }
             else if(cursorY > windowHeight / 2.5) {
-                obama.src = "obamas/obama_down_left.png";
+                newObama = "#obama_down_left";
             }
             else {
-                obama.src = "obamas/obama_up_left.png";
+                newObama = "#obama_up_left";
             }
         }
         else {
             
             if(cursorY > windowHeight / 2.5 && cursorY < (windowHeight / 2.5)*1.5) {
-                obama.src = "obamas/obama_right.png";
+                newObama = "#obama_right";
             }
             else if(cursorY > windowHeight / 2.5) {
-                obama.src = "obamas/obama_down_right.png";
+                newObama = "#obama_down_right";
             }
             else {
-                obama.src = "obamas/obama_up_right.png";
+                newObama = "#obama_up_right";
             }
         }
     }
-}    
+
+    if (newObama) {
+        // Hide all obamas
+        document
+            .querySelectorAll(".obama")
+            .forEach(el => el.classList.add("hide"));
+        // Show new obama
+        document
+            .querySelector(newObama)
+            .classList.remove("hide");
+    }
+}

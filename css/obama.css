@@ -1,4 +1,8 @@
-#obama {
+.hide {
+    display: none !important;
+}
+
+.obama {
     display: block;
     margin-left: auto;
     margin-right: auto;
